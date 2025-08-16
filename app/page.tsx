@@ -65,7 +65,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 relative">
       <Header setIsPopupOpen={setIsPopupOpen} />
 
-      <section className="py-20 pt-10 px-4 relative overflow-hidden">
+      <section className="sm:py-20 py-10 pt-10 px-4 relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-200/60 rounded-full animate-float"></div>
@@ -87,7 +87,7 @@ export default function HomePage() {
                     Simple • Reliable • Fast
                   </Badge>
                 </div>
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
+                <h1 className="text-5xl mobile-mt-0 mt-5 lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
                   Modern payment system for <span className="text-blue-600 animate-gradient-text">ambitious teams</span>
                 </h1>
               </div>
@@ -109,7 +109,7 @@ export default function HomePage() {
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex items-center gap-3">
+                    <div className="flex mobile:flex-row flex-col  mobile:items-center gap-3">
                       <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
                         <CheckCircle className="w-6 h-6 text-green-600" />
                       </div>
@@ -121,7 +121,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex items-center gap-3">
+                    <div className="flex mobile:flex-row flex-col  mobile:items-center gap-3">
                       <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                         <Shield className="w-6 h-6 text-blue-600" />
                       </div>
@@ -133,7 +133,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="bg-gradient-to-br from-purple-50 to-violet-50 border border-purple-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex items-center gap-3">
+                    <div className="flex mobile:flex-row flex-col  mobile:items-center gap-3">
                       <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
                         <Globe className="w-6 h-6 text-purple-600" />
                       </div>
@@ -145,7 +145,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex items-center gap-3">
+                    <div className="flex mobile:flex-row flex-col  mobile:items-center gap-3">
                       <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
                         <Headphones className="w-6 h-6 text-orange-600" />
                       </div>
@@ -257,7 +257,7 @@ export default function HomePage() {
       {/* Why Choose Section */}
       <section
         id="why-hex-pays"
-        className="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 relative overflow-hidden"
+        className="sm:py-20 py-5 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 relative overflow-hidden"
       >
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-20 w-64 h-64 bg-blue-200/20 rounded-full animate-float"></div>
@@ -538,18 +538,19 @@ export default function HomePage() {
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
 
-          <div className="flex justify-center items-center gap-8 mt-12 text-sm opacity-80">
-            <span>PCI DSS Level 1</span>
-            <span>3-D Secure</span>
-            <span>Fraud controls</span>
-            <span>Chargeback tools</span>
-            <span>24/7 support</span>
-          </div>
+     <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 mt-12 text-sm opacity-80">
+  <span>PCI DSS Level 1</span>
+  <span>3-D Secure</span>
+  <span>Fraud controls</span>
+  <span>Chargeback tools</span>
+  <span>24/7 support</span>
+</div>
+
         </div>
       </section>
 
       {/* Footer */}
-     <Footer scrollToSection={scrollToSection} />
+      <Footer scrollToSection={scrollToSection} />
 
       {/* Popup */}
       {isPopupOpen && (

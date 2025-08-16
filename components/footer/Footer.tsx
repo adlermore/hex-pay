@@ -7,10 +7,12 @@ interface FooterProps {
   scrollToSection: (section: string) => void;
 }
 
-function Footer({scrollToSection}: FooterProps) {
+function Footer({ scrollToSection }: FooterProps) {
   return (
     <footer className="bg-white border-t py-8">
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center md:justify-between gap-4 md:gap-0 text-center md:text-left">
+        
+        {/* Logo */}
         <div className="flex items-center gap-2">
           <Image
             src={logo}
@@ -20,7 +22,8 @@ function Footer({scrollToSection}: FooterProps) {
           <span className="font-semibold text-gray-900">Hex-Pays</span>
         </div>
 
-        <div className="flex items-center gap-6 text-sm text-gray-600">
+        {/* Links */}
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-sm text-gray-600">
           <button
             onClick={() => scrollToSection("terms")}
             className="hover:text-blue-600 transition-colors cursor-pointer"
@@ -35,7 +38,11 @@ function Footer({scrollToSection}: FooterProps) {
           </button>
         </div>
 
-        <p className="text-sm text-gray-500">© 2025 Hex-Pays. All rights reserved.</p>
+        {/* Copyright */}
+        <p className="text-sm text-gray-500">
+          © 2025 Hex-Pays. All rights reserved.
+        </p>
+
       </div>
     </footer>
   )

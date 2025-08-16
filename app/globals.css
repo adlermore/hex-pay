@@ -316,3 +316,14 @@
 .animate-scale-in {
   animation: scale-in 0.3s ease-out;
 }
+
+
+@media (max-width: 575px) {
+  .bg-card{
+    padding: 15px;
+  }
+  .text-4xl{
+    font-size: 28px;
+    padding: 15px 0;
+  }
+}

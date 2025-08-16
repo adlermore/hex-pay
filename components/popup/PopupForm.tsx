@@ -58,9 +58,9 @@ function PopupForm({ setIsPopupOpen }: PopupFormProps) {
         id="contact-popup"
         className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-scale-in border border-gray-100"
       >
-        <div className="p-8">
+        <div className="sm:p-8 p-5">
           <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-4">
+            <div className="sm:flex-row flex-col  items-center gap-4">
               <Image src={logo} alt="Logo" width={90} height={90} />
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">Let's Connect</h3>
@@ -204,7 +204,7 @@ function PopupForm({ setIsPopupOpen }: PopupFormProps) {
             </div>
           </form>
 
-          <div className="mt-8 pt-6 border-t border-gray-100">
+          <div className="sm:block hidden mt-8 pt-6 border-t border-gray-100">
             <div className="flex items-center justify-center gap-8 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4 text-green-500" />
