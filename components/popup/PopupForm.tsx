@@ -29,6 +29,7 @@ function PopupForm({ setIsPopupOpen }: PopupFormProps) {
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
     setLoading(true);
 
     try {

@@ -9,7 +9,7 @@ function Header({ setIsPopupOpen }: { setIsPopupOpen: (open: boolean) => void })
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
-        block: "start",
+        block: "start"
       })
     }
   }
