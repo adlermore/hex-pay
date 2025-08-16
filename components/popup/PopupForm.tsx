@@ -2,7 +2,7 @@ import { ArrowRight, BarChart3, Building, CheckCircle, Clock, Mail, Phone, Shiel
 import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 import Image from 'next/image'
-import logo from '@/public/logo.png'
+import logo from '@/public/images/logo.png'
 import { Button } from '../ui/button'
 
 interface PopupFormProps {

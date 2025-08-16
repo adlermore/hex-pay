@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from '../ui/button'
 import Image from 'next/image'
-import logo from '@/public/logo.png'
+import logo from '@/public/images/logo.png'
 
 function Header({ setIsPopupOpen }: { setIsPopupOpen: (open: boolean) => void }) {
   const scrollToSection = (sectionId: string) => {
