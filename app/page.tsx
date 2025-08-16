@@ -65,7 +65,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 relative">
       <Header setIsPopupOpen={setIsPopupOpen} />
 
-      <section className="sm:py-20 py-10 pt-10 px-4 relative overflow-hidden">
+      <section className="py-20 sm:py-10 pt-10 px-4 relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-200/60 rounded-full animate-float"></div>
@@ -87,7 +87,7 @@ export default function HomePage() {
                     Simple • Reliable • Fast
                   </Badge>
                 </div>
-                <h1 className="text-5xl mobile-mt-0 mt-5 lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
+                <h1 className="text-5xl sm:mt-5 lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
                   Modern payment system for <span className="text-blue-600 animate-gradient-text">ambitious teams</span>
                 </h1>
               </div>
@@ -109,7 +109,7 @@ export default function HomePage() {
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex mobile:flex-row flex-col  mobile:items-center gap-3">
+                    <div className="flex sm:flex-row flex-col  mobile:items-center gap-3">
                       <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
                         <CheckCircle className="w-6 h-6 text-green-600" />
                       </div>
@@ -121,7 +121,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex mobile:flex-row flex-col  mobile:items-center gap-3">
+                    <div className="flex sm:flex-row flex-col  mobile:items-center gap-3">
                       <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                         <Shield className="w-6 h-6 text-blue-600" />
                       </div>
@@ -133,7 +133,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="bg-gradient-to-br from-purple-50 to-violet-50 border border-purple-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex mobile:flex-row flex-col  mobile:items-center gap-3">
+                    <div className="flex sm:flex-row flex-col  mobile:items-center gap-3">
                       <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
                         <Globe className="w-6 h-6 text-purple-600" />
                       </div>
@@ -145,7 +145,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex mobile:flex-row flex-col  mobile:items-center gap-3">
+                    <div className="flex sm:flex-row flex-col  mobile:items-center gap-3">
                       <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
                         <Headphones className="w-6 h-6 text-orange-600" />
                       </div>
@@ -160,7 +160,7 @@ export default function HomePage() {
             </div>
 
             {/* Feature Grid with larger icons */}
-            <div className="grid grid-cols-2 gap-5 animate-slide-in-right">
+            <div className="grid grid-cols-2 pt-6 gap-5 animate-slide-in-right">
               <Card
                 className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
                 style={{ animationDelay: "0.1s" }}

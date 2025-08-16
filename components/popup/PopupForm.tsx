@@ -60,7 +60,7 @@ function PopupForm({ setIsPopupOpen }: PopupFormProps) {
       >
         <div className="sm:p-8 p-5">
           <div className="flex items-center justify-between mb-8">
-            <div className="sm:flex-row flex-col  items-center gap-4">
+            <div className="sm:flex  items-center gap-4">
               <Image src={logo} alt="Logo" width={90} height={90} />
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">Let's Connect</h3>
