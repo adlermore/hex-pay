@@ -4,17 +4,20 @@ import Image from 'next/image'
 import logo from '@/public/images/logo.png'
 
 function Header({ setIsPopupOpen }: { setIsPopupOpen: (open: boolean) => void }) {
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({
+      const offset = 50
+      const top = element.getBoundingClientRect().top + window.scrollY - offset
+      window.scrollTo({
+        top,
         behavior: "smooth",
-        block: "start"
       })
     }
   }
 
-  const [scrollY, setScrollY] = useState(0)
+  const [scrollY, setScrollY] = useState(100)
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -31,12 +34,14 @@ function Header({ setIsPopupOpen }: { setIsPopupOpen: (open: boolean) => void })
         borderBottomColor: `rgba(229, 231, 235, ${Math.min(scrollY / 100, 1)})}`,
       }}
     >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2 animate-slide-in-left">
+      <div className="container mx-auto px-4 py-1 flex items-center justify-between">
+        <div className="flex items-center gap-2 cursor-pointer animate-slide-in-left"
+          onClick={() => scrollToSection("home")}
+        >
           <Image
             src={logo}
             alt="Hex-Pays Logo"
-            className="w-22"
+            className="w-30"
           />
         </div>
 
@@ -75,7 +80,7 @@ function Header({ setIsPopupOpen }: { setIsPopupOpen: (open: boolean) => void })
 
         <Button
           onClick={() => setIsPopupOpen(true)}
-          className="animate-slide-in-right bg-blue-600 hover:bg-blue-700 transition-all duration-300 hover:scale-105"
+          className="animate-slide-in-right cursor-pointer bg-blue-600 hover:bg-blue-700 transition-all duration-300 hover:scale-105"
         >
           Contact sales
         </Button>

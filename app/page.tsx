@@ -54,15 +54,17 @@ export default function HomePage() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({
+      const offset = 50 
+      const top = element.getBoundingClientRect().top + window.scrollY - offset
+      window.scrollTo({
+        top,
         behavior: "smooth",
-        block: "start",
       })
     }
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 relative">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 relative" id="home">
       <Header setIsPopupOpen={setIsPopupOpen} />
 
       <section className="py-20 sm:py-10 pt-10 px-4 relative overflow-hidden">
@@ -101,7 +103,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   onClick={() => setIsPopupOpen(true)}
-                  className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 hover:scale-105 group w-fit"
+                  className="bg-blue-600 hover:bg-blue-700 cursor-pointer transition-all duration-300 hover:scale-105 group w-fit"
                 >
                   Get started
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -532,19 +534,19 @@ export default function HomePage() {
             onClick={() => setIsPopupOpen(true)}
             size="lg"
             variant="secondary"
-            className="bg-white text-blue-600 hover:bg-gray-100 transition-all duration-300 hover:scale-105 group"
+            className="bg-white cursor-pointer text-blue-600 hover:bg-gray-100 transition-all duration-300 hover:scale-105 group"
           >
             Start contact now
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
 
-     <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 mt-12 text-sm opacity-80">
-  <span>PCI DSS Level 1</span>
-  <span>3-D Secure</span>
-  <span>Fraud controls</span>
-  <span>Chargeback tools</span>
-  <span>24/7 support</span>
-</div>
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 mt-12 text-sm opacity-80">
+            <span>PCI DSS Level 1</span>
+            <span>3-D Secure</span>
+            <span>Fraud controls</span>
+            <span>Chargeback tools</span>
+            <span>24/7 support</span>
+          </div>
 
         </div>
       </section>

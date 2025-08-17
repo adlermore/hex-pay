@@ -1,0 +1,28 @@
+{
+  "name": "Hex-Pays",
+  "short_name": "HexPays",
+  "description": "Secure Payment Solutions for Modern Businesses. Simple, reliable, and fast payment processing with PCI DSS Level 1 compliance.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#155dfb",
+  "theme_color": "#155dfb",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
